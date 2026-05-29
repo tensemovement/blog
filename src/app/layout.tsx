@@ -80,7 +80,16 @@ export default async function RootLayout({
 
             <footer className="border-t border-border">
               <div className="w-full px-6 py-8 text-center text-sm text-muted-foreground">
-                © {"2026"} TT Blog · 텐시
+                ©{" "}
+                <a
+                  href="https://tensemovement.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="transition-colors hover:text-brand"
+                >
+                  TENSE MOVEMENT
+                </a>{" "}
+                2024. All rights reserved.
               </div>
             </footer>
           </main>
