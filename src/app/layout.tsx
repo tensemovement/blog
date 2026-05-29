@@ -71,7 +71,7 @@ export default async function RootLayout({
 
         {/* 2단 구성: 좌측 제목 네비게이션 + 우측 콘텐츠 */}
         <div className="flex flex-1 flex-col md:flex-row">
-          <aside className="shrink-0 border-b border-border px-4 py-6 md:w-64 md:border-b-0 md:border-r">
+          <aside className="shrink-0 border-b border-border px-4 py-6 md:w-80 md:border-b-0 md:border-r">
             <PostNav posts={posts} />
           </aside>
           <main className="min-w-0 flex-1">{children}</main>
