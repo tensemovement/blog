@@ -157,19 +157,49 @@
   text-underline-offset: 2px;
 }
 
-/* 섹션 헤딩: 키워드(타이틀) + 설명(부제) 2단 구성.
-   타이틀은 헤딩 본래의 serif·굵게를 그대로 쓰고, 부제만 작은 산세리프 회색으로 낮춘다. */
+/* ── 섹션 헤딩: 키워드(타이틀) + 설명(부제) 2단 구성 ──────────────────
+   h2 = 대단원, h3 = 그 안의 세부 항목. 크기·굵기·구분선·들여쓰기로 위계를 분명히 한다. */
 .article-body .heading-title {
   display: block;
 }
 .article-body .heading-subtitle {
   display: block;
-  margin-top: 0.4rem;
+  margin-top: 0.3rem;
   font-family: var(--font-sans);
-  font-size: 1.05rem;
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: normal;
   color: var(--foreground);
+}
+.article-body .section-heading {
+  margin-bottom: 1.6rem;
+}
+
+/* 대단원(h2): 크고 굵게 + 하단 구분선으로 본문과 끊는다. */
+.article-body h2.section-heading {
+  font-size: 2rem;
+  line-height: 1.2;
+  font-weight: 700;
+  margin-top: 4rem;
+  padding-bottom: 0.85rem;
+  border-bottom: 1px solid var(--border);
+}
+.article-body h2.section-heading .heading-subtitle {
+  font-size: 1.05rem;
   opacity: 0.72;
+}
+
+/* 세부 항목(h3): 대단원보다 확실히 작게·가볍게. 구분선 대신 브랜드 좌측 바 + 들여쓰기로
+   "대단원 안에 들여쓴 하위 항목"이라는 중첩 신호를 준다. */
+.article-body h3.section-heading {
+  font-size: 1.3rem;
+  line-height: 1.3;
+  font-weight: 600;
+  margin-top: 2.75rem;
+  padding-left: 0.85rem;
+  border-left: 3px solid var(--brand);
+}
+.article-body h3.section-heading .heading-subtitle {
+  font-size: 0.9rem;
+  opacity: 0.62;
 }
