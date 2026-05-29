@@ -36,9 +36,9 @@ export async function PostArticle({ post }: { post: Post }) {
           <Image
             src="/avatar.png"
             alt="텐시"
-            width={40}
-            height={40}
-            className="rounded-full"
+            width={32}
+            height={32}
+            className="h-8 w-8 rounded-full border border-border object-cover"
           />
           <span className="text-sm font-medium text-foreground">텐시</span>
         </div>

@@ -1,3 +1,6 @@
+/* 본문 산세리프: Pretendard (dynamic-subset — 한글 글리프 on-demand 로드).
+   CSS 스펙상 @import는 최상단이어야 하므로 Tailwind import보다 먼저 둔다. */
+@import url("https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css");
 @import "tailwindcss";
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
@@ -9,7 +12,7 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
+  --font-sans: "Pretendard Variable", var(--font-geist-sans), system-ui, sans-serif;
   --font-mono: var(--font-geist-mono);
   --font-serif: var(--font-serif);
   --font-heading: var(--font-serif);
