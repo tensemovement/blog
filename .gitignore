@@ -43,3 +43,5 @@ next-env.d.ts
 
 # local agent state
 .omc/
+
+.idea
