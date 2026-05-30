@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { format } from "date-fns";
+import { ko } from "date-fns/locale";
 import { cn } from "@/lib/utils";
 import type { PostMeta } from "@/types/post";
 
@@ -40,6 +42,12 @@ export function PostNav({ posts }: { posts: PostMeta[] }) {
                 )}
               >
                 {post.title}
+                <time
+                  dateTime={post.date.toISOString()}
+                  className="mt-0.5 block text-xs font-normal text-muted-foreground/70"
+                >
+                  {format(post.date, "yyyy. M. d.", { locale: ko })}
+                </time>
               </Link>
             </li>
           );
